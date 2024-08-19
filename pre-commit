@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+files=$(git diff --cached --name-only --diff-filter=ACM)
+for file in $files; do
+
+  if file "$file" | grep -q text; then
+    sed -i '' -e 's/[[:space:]]*$//' "$file"
+    git add "$file"
+  fi
+  
+done
+
+exit 0
