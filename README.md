@@ -1,23 +1,21 @@
-# Project Title
+# Git Hook Script for Removing Trailing Whitespace
 
-A brief description of what this project does and its purpose.
+This script is designed to automatically remove trailing whitespace from files that are staged for commit in your Git repository. This can help maintain a cleaner codebase and prevent unnecessary changes in version control.
+
+## How It Works
+
+- The script is executed every time you attempt to commit changes.
+- It iterates through the staged files and checks for trailing whitespace.
+- Any trailing whitespace found is removed before the commit is completed.
 
 ## Installation
 
-Instructions on how to install and run the project.
+1. Save the script in the `.git/hooks/pre-commit` directory of your repository.
+2. Make sure to give it executable permissions:
+   ```bash
+   chmod +x .git/hooks/pre-commit
+   ```
 
 ## Usage
 
-Examples of how to use the project, including code snippets.
-
-## Contributing
-
-Guidelines for contributing to the project.
-
-## License
-
-Information about the project's license.
-
-## Contact
-
-Your contact information or project maintainer's information.
+No additional usage is required; the script runs automatically with each commit!
